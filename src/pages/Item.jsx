@@ -1,9 +1,15 @@
 import React from 'react'
+import { useProductById } from '../hooks/useProductById'
+import ItemListContainerComponent from '../assets/components/ItemListContainerComponent/ItemListContainerComponent';
+import { useParams } from 'react-router-dom';
 
-const item = () => {
+const Item = () => {
+  const {id} = useParams();
+  const {product} = useProductById(id);
+
   return (
-    <div>item</div>
+    <ItemListContainerComponent product={product}/>
   )
 }
 
-export default item
+export default Item;

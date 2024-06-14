@@ -1,17 +1,11 @@
-import React from 'react'
-import ItemListContainerComponent from "../assets/components/ItemListContainerComponent/ItemListContainerComponent"
-import { useProducts } from '../hooks/useProducts'
-
+import React from "react";
+import { useProducts } from "../hooks/useProducts";
+import ItemListContainerComponent from "../assets/components/ItemListContainerComponent/ItemListContainerComponent";
 
 
 const home = () => {
+  const { products } = useProducts();
+  return <ItemListContainerComponent products={products} />;
+};
 
-  const { products } = useProducts(); 
-  return (
-    <>
-    <ItemListContainerComponent products={products }/>
-    </>
-  )
-}
-
-export default home
+export default home;

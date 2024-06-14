@@ -12,12 +12,7 @@ export const useProducts = () => {
         .catch((error) => {
             console.error(error);
         });
-    });
+    },[]);
     return { products };
-
-
-
-
-
 
 }
