@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import NavBarComponent from "../assets/components/NavBarComponent/NavBarComponent"
-import Home from "../pages/Home"
-import Item from "../pages/Item"
-import Category from "../pages/Category"
+
+import Home from "../pages/home";
+import Item from "../pages/Item";
+import Category from "../pages/Category";
 
 const MainRouter = () => {
   return (
@@ -18,4 +19,4 @@ const MainRouter = () => {
   )
 }
 
-export default MainRouter
+export default MainRouter;

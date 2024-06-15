@@ -6,9 +6,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-import { getAllCategories } from "../../../services/products";
-import CartWidgetComponent from "../CartWidgetComponent/CartWidgetComponent";
 
+import CartWidgetComponent from "../CartWidgetComponent/CartWidgetComponent";
+import { getAllCategories } from "../../../services/products";
 
 const NavBarComponent = () => {
     const [categories, setCategories] = React.useState([]);

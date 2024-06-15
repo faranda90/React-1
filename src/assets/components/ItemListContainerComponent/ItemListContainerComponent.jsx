@@ -2,13 +2,13 @@ import React from 'react'
 
 import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import "./ItemListContainerComponent.css"
+import "./ItemListContainerComponent.css";
+
 
   
 
 const ItemListContainerComponent = ({products}) => {
-  
-  return (
+    return (
     <div className="itemListContainer">
       {products.map ((product) => {
         return (
@@ -21,10 +21,11 @@ const ItemListContainerComponent = ({products}) => {
             </Card.Body>
           </Card>
         );
-      })}
+      })
+      };
     </div>
   );
-};
+}; 
 
 export default ItemListContainerComponent;
 
