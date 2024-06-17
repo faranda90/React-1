@@ -35,7 +35,7 @@ const ItemDetailContainerComponent = ({ product }) => {
                 <p>{product.price}</p>
             </div>
         </div>
-    );
+    )
 };
 
 export default ItemDetailContainerComponent;

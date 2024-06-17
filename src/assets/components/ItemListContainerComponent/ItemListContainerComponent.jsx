@@ -22,7 +22,7 @@ const ItemListContainerComponent = ({products}) => {
           </Card>
         );
       })
-      };
+      }
     </div>
   );
 }; 

@@ -9,6 +9,6 @@ const Category = () => {
 
   const { products } = useProductsByCategory(id);
   return <ItemListContainerComponent products={products}/>;
-};
+}
 
 export default Category;

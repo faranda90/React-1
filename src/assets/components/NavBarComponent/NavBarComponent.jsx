@@ -10,6 +10,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidgetComponent from "../CartWidgetComponent/CartWidgetComponent";
 import { getAllCategories } from "../../../services/products";
 
+
 const NavBarComponent = () => {
     const [categories, setCategories] = React.useState([]);
     React.useEffect(() => {
@@ -31,7 +32,7 @@ const NavBarComponent = () => {
             <Container>
                 <Navbar.Brand>
                     <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-                        Ezio Store
+                        TS - Store
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -44,7 +45,7 @@ const NavBarComponent = () => {
                                         <Link to={`/category/${category.slug}`}>{category.name}</Link>
                                     </NavDropdown.Item>
                                 );
-                            })}
+                            })};
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
