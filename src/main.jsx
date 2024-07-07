@@ -8,7 +8,7 @@ import './index.css'
 
 
 
-// Initialize Firebase
+
 initializeApp(firebaseConfig);
 
 

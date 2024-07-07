@@ -1,9 +1,16 @@
 import React from "react";
+import CartProvider from "./assets/context/CartContext";
 import MainRouter from "./routes/MainRouter";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 function App() {
-  return <MainRouter />;
+  return(
+  <CartProvider>
+    <MainRouter />
+  </CartProvider>
+);
+
 }
 
 export default App;

@@ -1,17 +1,27 @@
-import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+
 const CartWidgetComponent = () => {
-    const customStyle = {
+    const { cart } = React.useContext(CartContext);
+
+    const customStyles = {
         color: "white",
         fontSize: "1.3rem",
-        marginRigth: "0.5rem",
+        marginRight: "0.5rem",
     };
+
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
     return (
         <div>
-            <FontAwesomeIcon icon={faCartArrowDown} style={customStyle} />
-            <span style={customStyle}>1</span>
+            <Link to="/cart">
+                <FontAwesomeIcon icon={faCartPlus} style={customStyles} />
+                <span style={customStyles}>{totalItems}</span>
+            </Link>
         </div>
     );
 };
